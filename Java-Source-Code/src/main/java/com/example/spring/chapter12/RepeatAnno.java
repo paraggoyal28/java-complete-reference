@@ -39,6 +39,11 @@ public class RepeatAnno {
             Annotation annos = m.getAnnotation(MyRepeatedAnnos.class);
             System.out.println(annos);
 
+            Annotation[] myAnnos = m.getAnnotationsByType(MyAnnoRep.class);
+            for (Annotation anno: myAnnos) {
+                System.out.println(anno);
+            }
+
         } catch (NoSuchMethodException e) {
             System.out.println("No such method present");
         }
